@@ -1,0 +1,24 @@
+{{define "contact"}}
+<div class="sec">
+  <h1>Contact Info</h1>
+  <p class="sub">Let's work together</p>
+  <div class="con-g">
+    <div class="con-i">
+      <h3>Get in Touch</h3>
+      <p>📞 <strong>Phone:</strong> +234 705 946 4235</p>
+      <p>✉️ <strong>Email:</strong> <a href="mailto:olasubomiwilliams1@gmail.com">olasubomiwilliams1@gmail.com</a></p>
+      <p style="margin-top:1.5rem">I am currently open to freelance projects and full-time design roles. If you have a project in mind or just want to say hello, feel free to reach out.</p>
+    </div>
+    <div class="con-f">
+      <h3 style="margin-bottom:1rem">Send a Message</h3>
+      <form hx-post="/contact" hx-target="#form-res" hx-swap="innerHTML">
+        <div class="fg"><label>Name</label><input type="text" name="name" required></div>
+        <div class="fg"><label>Email</label><input type="email" name="email" required></div>
+        <div class="fg"><label>Message</label><textarea name="message" required></textarea></div>
+        <button type="submit" class="btn">Send Message</button>
+        <div id="form-res"></div>
+      </form>
+    </div>
+  </div>
+</div>
+{{end}}
